@@ -1,0 +1,80 @@
+@import url('https://www.w3schools.com/w3css/4/w3.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('./w3.css');
+@import url('https://use.fontawesome.com/releases/v5.0.13/css/all.css');
+
+
+.website {
+    margin-top: 5px;
+    border-top: black 2px solid;
+    transform: scale(1.1);
+    /*background-color: teal;*/
+    padding: 15px;
+}
+
+li::before {
+    color: teal;
+    margin-right: 5px;
+    border: purple 3px solid;
+}
+
+p.info-zone {
+  word-wrap: break-word;
+}
+
+.w3-twothird > .w3-container {
+    height: 99.76vh;
+}
+
+hr {
+    margin-bottom: 10px;
+}
+
+.eduLogo {
+  animation: App-logo-spin infinite 3s linear;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.profile {
+    border-radius: 40%;
+}
+.fullExtend {
+    /*
+     *border: 2px dashed orange;
+     */
+}
+
+#footer {
+  position: fixed;
+  bottom: -80;
+  width: 100%;
+  /*height: 2.96em;*/
+  height: 9.2%;
+  z-index: 10;
+  background-color: #efefef;
+  text-align: center;
+}
+
+html,
+body {
+  font-size: 1em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.projectContainer {
+  width: 100%/3;
+}
+
+.green_balloon {
+    margin-bottom: 5px;
+}

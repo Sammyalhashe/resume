@@ -1,0 +1,14 @@
+{
+  "name": "electron-resume",
+  "version": "1.0.0",
+  "description": "Resume Desktop App",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Sammy Al Hashemi",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^2.0.7"
+  }
+}

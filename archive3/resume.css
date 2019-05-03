@@ -1,0 +1,53 @@
+@import url('https://www.w3schools.com/w3css/4/w3.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('./w3.css');
+@import url('https://use.fontawesome.com/releases/v5.0.13/css/all.css');
+p.info-zone {
+  word-wrap: break-word;
+}
+
+.eduLogo {
+  animation: App-logo-spin infinite 3s linear;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.profile {
+    border-radius: 40%;
+}
+.fullExtend {
+    height: 100%;
+    /*
+     *border: 2px dashed orange;
+     */
+}
+
+#footer {
+  position: fixed;
+  bottom: -80;
+  width: 100%;
+  /*height: 2.96em;*/
+  height: 10%;
+  z-index: 10;
+  background-color: #efefef;
+  text-align: center;
+}
+
+html,
+body {
+  font-size: 1em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.projectContainer {
+  width: 100%/3;
+}

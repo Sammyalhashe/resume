@@ -1,0 +1,157 @@
+doctype html
+html
+    head
+        title= resume
+        style
+            include resume.css
+    body
+        .w3-content.w3-margin-top(style={'max-width':'1400px', height:'auto'})
+            .w3-third
+                .w3-white.w3-text-grey.w3-card-4
+                    .w3-display-container
+                        img(src='./Images/sanFran.jpg', alt='Avatar', style={'width': '100%'})
+                        .w3-display-topleft.w3-container.w3-text-black
+                            h2(style={'color': '#000000'}) Sammy Al Hashemi
+                .w3-container(style={'font-size': '0.873em'})
+                    br
+                    p
+                        i.fa.fa-terminal.fa-fw.w3-margin-right.w3-large.w3-text-teal
+                        | Device Characterization Engineer
+                    p.info-zone
+                        //- i.material-icons(style={'color': 'teal'}) home
+                        i.fa.fa-home.fa-fw.w3-margin-right.w3-large.w3-text-teal
+                        | Mississauga, Ontario, Canada
+                    p.info-zone
+                        i.fa.fa-envelope.fa-fw.w3-margin-right.w3-large.w3-text-teal
+                        | sammy.alhashemi@mail.utoronto.ca
+                    p.info-zone
+                        i.fa.fa-phone.fa-fw.w3-margin-right.w3-large.w3-text-teal
+                        | (408)-908-9512
+                    hr
+                    p.w3-large
+                        b
+                            i.skillsLogo.fa.fa-asterisk.fa-fw.w3-margin-right.w3-text-teal
+                            | Skills
+                    p
+                        | Python &nbsp;
+                        i.fab.fa-python
+                    .w3-light-grey.w3-round-xlarge.w3-small
+                        .w3-container.w3-center.w3-round-xlarge.w3-teal.score(style={'width':'70%'}) 70%
+                    p
+                        | Java &nbsp;
+                        i.fab.fa-java
+                    .w3-light-grey.w3-round-xlarge.w3-small
+                        .w3-container.w3-center.w3-round-xlarge.w3-teal.score(style={'width':'60%'})
+                            .w3-center.w3-text-white 60%
+                    p
+                        | Angular &nbsp;
+                        i.fab.fa-angular
+                    .w3-light-grey.w3-round-xlarge.w3-small
+                        .w3-container.w3-center.w3-round-xlarge.w3-teal.score(style={'width':'60%'}) 60%
+                    p
+                        i.fab.fa-html5   - &nbsp;
+                        i.fab.fa-css3  - &nbsp;
+                        i.fab.fa-js-square
+                    .w3-light-grey.w3-round-xlarge.w3-small
+                        .w3-container.w3-center.w3-round-xlarge.w3-teal.score(style={'width':'40%'}) 40%
+                    br
+                    p.w3-large.w3-text-theme
+                        b
+                            i.fa.fa-globe.fa-fw.w3-margin-right.w3-text-teal
+                            | Languages
+                    p English
+                    .w3-light-grey.w3-round-xlarge
+                        .w3-round-xlarge.w3-teal(style={'height':'24px', 'width': '100%'})
+                    br
+        .w3-twothird
+            .w3-container.w3-card.w3-white.w3-margin-bottom
+                h2.w3-text-grey.w3-padding-16
+                    i.fa.fa-suitcase.fa-fw.w3-margin-right.w3-xxlarge.w3-text-teal
+                    | Work Experience
+                .w3-container
+                    h5.w3-opacity
+                        b Device Characterization and Product Engineering Intern
+                        i  Microsemi Corp.
+                    h6.w3-text-teal
+                        i.fa.fa-calendar.fa-fw.w3-margin-right
+                        | July 2017 - &nbsp;
+                        span.w3-tag.w3-teal.w3-round Present
+                    p
+                        include:markdown-it Markdown/Microsemi.md
+                    hr
+                .w3-container
+                    h5.w3-opacity
+                        b Undergraduate Research Assistant
+                        i &nbsp;University of Toronto, AP
+                            sub 2
+                            | D Labs
+                    h6.w3-text-teal
+                        i.fa.fa-calendar.fa-fw.w3-margin-right
+                        | May 2015 - Sept 2016
+                    p
+                        include:markdown-it Markdown/Research.md
+                    hr
+                //- .w3-container
+                //-     h5.w3-opacity
+                //-         b Junior Tennis Coach
+                //-         i Ontario Racquet Club/Pine Point Tennis Club
+                //-     h6.w3-text-teal
+                //-         i.fa.fa-calendar.fa-fw.w3-margin-right
+                //-         | May 2011 - Sept 2014
+                //-     p Supervisor(s): Giulio Morelli (Tennis Canada Coach Level 5) (647)-404-0248
+                br
+        .w3-container.w3-card.w3-white
+            h2.w3-text-grey.w3-padding-16
+                span.eduLogo
+                    i.fa.fa-certificate.fa-fw.w3-margin-right.w3-xlarge.w3-text-teal.eduLogo
+                | Education
+            .w3-container
+                h4.w3-opacity
+                    b University of Toronto
+                h5.w3-opacity
+                    b Bachelor of Applied Science and Engineering, &nbsp;
+                    i Department of Engineering Science
+                h6.w3-text-teal
+                    i.fa.fa-calendar.fa-fw.w3-margin-right
+                    | Sept 2014 - Present
+                p
+                    | Enrolled in the Engineering Science Program. I chose the Physics option which focuses on engineering design with major physics applications
+                    br
+                    b cGPA: &nbsp;
+                    i 3.56
+                hr
+            .w3-container
+                h4.w3-opacity
+                    b Mentor College 
+                    | ,&nbsp;
+                    i High School
+                h5.w3-text-teal
+                    i.fa.fa-calendar.fa-fw.w3-margin-right
+                    | 2008 - 2014
+                p
+                    b High School Diploma
+        .w3-container.w3-card.w3-white(style={'font-size': '0.73em'})
+            h2.w3-text-grey.w3-padding-16
+                i.fas.fa-project-diagram.fa-fw.w3-margin-right.w3-xlarge.w3-text-teal
+                | Projects
+            .w3-cell-row
+                .w3-container.w3-cell.projectContainer
+                    h6.w3-opacity
+                        b Robot Pipe Scanner
+                    p
+                        include:markdown-it Markdown/Robot.md
+            .w3-cell-row
+                .w3-container.w3-cell.projectContainer
+                    h6.w3-opacity
+                        b Finder Thingy
+                    p
+                        include:markdown-it Markdown/FinderThingy.md
+                .w3-container.w3-cell.projectContainer
+                    h6.w3-opacity
+                        b Personal Website
+                    p
+                        include:markdown-it Markdown/Website.md
+    footer#footer.w3-container.w3-teal.w3-center.w3-margin-top
+        span Designed with Pug + MD + CSS
+
+
