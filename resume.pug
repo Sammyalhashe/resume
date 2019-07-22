@@ -1,155 +1,102 @@
-doctype html
-html
-    head
-        title= resume
-        style
-            include resume.css
-    body
+include resume-mixins.pug
 
-        // Left panel
-        .w3-content(style={'max-width':'1400px', height:'auto'})
-            .w3-third
-                .w3-white.w3-text-grey.w3-card-4
-                    .profile.w3-display-container
-                        .w3-display-topleft.w3-container.w3-text-black
-                            h2(style={'color': '#000000', 'border-bottom:': 'black 3px solid'}) Sammy Al Hashemi
-                br
-                br
+#main
+  #title
+    h1 Sammy Al Hashemi
+    .subtitle Aspiring Software Engineer
 
-                // personal information ////////////////////////
-                .w3-container(style={'font-size': '0.87em'})
-                    //-p.info-zone
-                        //-i.fa.fa-home.fa-fw.w3-margin-right.w3-large.w3-text-teal
-                        //-| Mississauga, Ontario, Canada
-                    p.info-zone
-                        i.fa.fa-envelope.fa-fw.w3-margin-right.w3-large.w3-text-teal
-                        | sammy.alhashemi@mail.utoronto.ca
-                    p.info-zone
-                        i.fa.fa-phone.fa-fw.w3-margin-right.w3-large.w3-text-teal
-                        | (647)-463-2638
-                    hr
+  .main-block
+    h2 #[i.fa.fa-suitcase] Experiences
+    
+    +item("Device Characterization Engineering Intern", "Microsemi Corp.", "San Jose, CA", "2017", "2018")
+      include:markdown-it(html=true) Markdown/microsemi.md
+        
+    +item("Undergraduate Researcher", "University of Toronto", "Toronto, On", "2015", "2016")
+      include:markdown-it(html=true) Markdown/Research.md
+        
+  .main-block
+    h2 #[i.fa.fa-folder-open] Projects 
+    
+    +item("Thesis", "Ed. Rogers School of Electrical and Computer Engineering", null, "2018", "2019")
+      include:markdown-it(html=true) Markdown/Thesis.md
+        
+    // +item("Data Charter", null, null, null)
+      include:markdown-it(html=true) Markdown/charter.md
+        
+    +item("Dashcam Speed Visualizer", null, null, null)
+      include:markdown-it(html=true) Markdown/dashcam_project.md
 
+    +item("ATPscraper API", null, null, null)
+      include:markdown-it(html=true) Markdown/atp_scraper.md
+ 
+  .main-block.concise
+    h2 #[i.fa.fa-graduation-cap] Education
+    
+    // +item("Squire Training", "Castle Black", "North",  "Sn 1", "Sn 3")
+      .description Made the bed, folded the towels, listened a lot.
+    
+    +item("University of Toronto")
+      .concise
+        :markdown-it
+          #### cGPA: 3.52 - graduated with honours
+          - Bachelor of Applied Science and Engineering 
+          - Department of Engineering Science (major in Physics)
 
-                    // Education section ///////////////////////
-                    p.w3-large
-                        b
-                            i.skillsLogo.fa.fa-asterisk.fa-fw.w3-margin-right.w3-text-teal
-                            | Education
-                        ul
-                            li University of Toronto
-                            ul
-                                li Bachelor of Applied Science and Engineering
-                            li Department of Engineering Science
-                            li Major in physics
-                            p
-                                b cGPA: 3.56
+#sidebar(style={'font-size': '0.55em'})
+  #contact.side-block
+    h1 Contact Info
+    ul
+      li #[i.fa.fa-globe]  sammyalhashemi.com
+      li #[i.fab.fa-linkedin] /in/sammyalhashemi
+      li #[i.fa.fa-envelope] sammyalhashemi1@outlook.com
+      li #[i.fab.fa-github] github.com/Sammyalhashe
+      li #[i.fa.fa-phone] 647.463.2638
+      
+  #skills.side-block
+    h1 Software Skills
+    ul
+      // li #[i.fab.fa-python] Python
+      li Python
+      li Flask
+      li TensorFlow/Keras
+      li openCV
+    ul
+      li Angular
+      // li #[i.fab.fa-angular] Angular
+      // li #[i.fab.fa-node-js] nodeJS/ExpressJS
+      li nodeJS/ExpressJS
+    ul
+      // li #[i.fab.fa-java] Java
+      li Java
+      li go
+    ul
+      li Docker
+      li Firebase
 
-                    // Software skills /////////////////////////
-                    p.w3-large
-                        b
-                            i.skillsLogo.fa.fa-asterisk.fa-fw.w3-margin-right.w3-text-teal
-                            | Software Skills
-                    ul
-                        li
-                            p
-                                | Python &nbsp;
-                                i.fab.fa-python
-                        li
-                            p
-                                | Javascript/nodeJS &nbsp;
-                                i.fab.fa-node-js  
-                        li
-                            p
-                                | Angular &nbsp;
-                                i.fab.fa-angular
-                        li
-                            p
-                                | ReactJS &nbsp;
-                                i.fab.fa-react
-                        //-li
-                            //-p
-                                //-| Java (some Android) &nbsp;
-                                //-i.fab.fa-android
-                    // Hardware Skills /////////////////////////
-                    p.w3-large
-                        b
-                            i.skillsLogo.fa.fa-asterisk.fa-fw.w3-margin-right.w3-text-teal
-                            | Hardware Skills
-                    ul
-                        li
-                            p
-                                | Verilog &nbsp;
-                                i.fas.fa-hdd
-                        // li
-                            // p
-                                // | Electronic Circuit Analysis &nbsp;
-                                // i.fas.fa-bolt
-                    
-                    // Courses Taken //////////////////////////////////////////
-                    p.w3-large.w3-text-theme
-                        b
-                            i.fa.fa-globe.fa-fw.w3-margin-right.w3-text-teal
-                            | Courses Taken 
-                    ul.courseList
-                        li Algorithms/Foundations of Computing
-                        li Introduction to Databases 
-                        li Data Structures & Algorithms 
-                        li Machine Learning and Data Mining
-                        li Natural Language Processing
-                        li Electronic Circuits/Digital Electronics
-                    br
-                    // website ////////////////////////////////////////////////
-                    .w3-large.w3-text-theme.website
-                        b
-                            i.fab.fa-chrome.fa-fw.w3-margin-right.w3-text-teal
-                            | Website
-                        p
-                            a(href='https://website2-e5cf5.firebaseapp.com') https://website2-e5cf5.firebaseapp.com
-        // right two third container panel ////////////////////////////////////
-        .w3-twothird.fullExtend(style={'font-size': '0.73em'})
-            .w3-container.w3-card.w3-white.w3-margin-bottom
-                h3.w3-text-grey.w3-padding-8
-                    i.fa.fa-suitcase.fa-fw.w3-margin-right.w3-xlarge.w3-text-teal
-                    | Work Experience
-                .w3-container
-                    h6.w3-opacity
-                        b Device Characterization and Product Engineering Intern &nbsp;
-                        i  Microsemi Corp.
-                    h6.w3-text-teal
-                        i.fa.fa-calendar.fa-fw.w3-margin-right
-                        | July 2017 - August 2018
-                    p
-                        include:markdown-it Markdown/Microsemi.md
-                    //-hr
-                h3.w3-text-grey.w3-padding-8
-                    i.fas.fa-project-diagram.fa-fw.w3-margin-right.w3-xlarge.w3-text-teal
-                    | Projects
-                .w3-container
-                    h6.w3-opacity
-                        b Thesis
-                    h6.w3-text-teal
-                        //-i.fa.fa-calendar.fa-fw.w3-margin-right
-                        //-| July 2017 - &nbsp; 
-                        //-span.w3-tag.w3-teal.w3-round Present
-                    p
-                        include:markdown-it(html=true) Markdown/Thesis.md
-                .w3-container
-                    h6.w3-opacity
-                        b Data Charter
-                    p
-                        include:markdown-it(html=true) Markdown/charter.md
-                .w3-container
-                    h6.w3-opacity
-                        b Personal Website
-                    p
-                        include:markdown-it(html=true) Markdown/Website.md
-                .w3-container
-                    h6.w3-opacity
-                        b DashCam Speed Visualizer
-                    p
-                        include:markdown-it(html=true) Markdown/dashcam_project.md
-        br
-        br
-        footer#footer.w3-container.w3-teal.w3-center.w3-margin-top
+    h1 Hardware Skills
+    ul
+      // li #[i.fas.fa-hdd] Verilog
+      li Verilog
+  #skills.side-block
+    h1 Courses Taken
+    ul
+      li Data structures and algorithms
+      li Foundations of Computing
+      li Numerical methods in python
+      li Machine learning and data mining
 
 
+  #skills.side-block
+    h1 Interests/Hobbies
+    ul
+      li Tennis
+      li Soccer
+      li Basketball
+      // li Midnight walks
+
+  //- This points to mnjul's original resume project
+  // #disclaimer.side-block.
+      This résumé was wholly typeset with HTML/CSS — see code git.io/vVSYL
+
+style
+  include resume.scss

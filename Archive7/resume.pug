@@ -1,0 +1,178 @@
+doctype html
+html
+    head
+        title= resume
+        style
+            include resume.css
+    body
+
+        // Left panel
+        .w3-content(style={'max-width':'1400px', height:'auto'})
+            .w3-third
+                .w3-white.w3-text-grey.w3-card-4
+                    .profile.w3-display-container
+                        .w3-display-topleft.w3-container.w3-text-black
+                            h2(style={'color': '#000000', 'border-bottom:': 'black 3px solid'}) Sammy Al Hashemi
+                br
+                br
+
+                // personal information ////////////////////////
+                .w3-container(style={'font-size': '0.87em'})
+                    //-p.info-zone
+                        //-i.fa.fa-home.fa-fw.w3-margin-right.w3-large.w3-text-teal
+                        //-| Mississauga, Ontario, Canada
+                    p.info-zone
+                        i.fa.fa-envelope.fa-fw.w3-margin-right.w3-large.w3-text-teal
+                        | sammy.alhashemi@mail.utoronto.ca
+                    p.info-zone
+                        i.fa.fa-phone.fa-fw.w3-margin-right.w3-large.w3-text-teal
+                        | (647)-463-2638
+                    p.info-zone
+                        i.fab.fa-github.fa-fw.w3-margin-right.w3-large.w3-text-teal
+                        | github.com/Sammyalhashe
+                    hr
+
+
+                    // Education section ///////////////////////
+                    p.w3-large
+                        b
+                            i.skillsLogo.fa.fa-asterisk.fa-fw.w3-margin-right.w3-text-teal
+                            | Education
+                        ul
+                            li University of Toronto
+                            ul
+                                li Bachelor of Applied Science and Engineering
+                            li Department of Engineering Science
+                            li Major in physics
+                            p
+                                b cGPA: 3.56
+
+                    // Software skills /////////////////////////
+                    p.w3-large
+                        b
+                            i.skillsLogo.fa.fa-asterisk.fa-fw.w3-margin-right.w3-text-teal
+                            | Software Skills
+                    ul
+                        li
+                            p
+                                | Python &nbsp;
+                                i.fab.fa-python
+                        li
+                            p
+                                | Java
+                                // | Javascript/nodeJS &nbsp;
+                                // i.fab.fa-node-js
+                                i.fab.fa-java
+                        li
+                            p
+                                | Angular &nbsp;
+                                i.fab.fa-angular
+                        li
+                            p
+                                // | ReactJS &nbsp;
+                                // | Object-oriented programming &nbsp;
+                                | Tensorflow/Keras
+                                // i.fab.fa-react
+                        li
+                            p
+                                // | Java (some Android) &nbsp;
+                                | openCV
+                                // | Swift &nbsp;
+                                // i.fab.fa-apple
+                                // i.fab.fa-android
+                    // Hardware Skills /////////////////////////
+                    p.w3-large
+                        b
+                            i.skillsLogo.fa.fa-asterisk.fa-fw.w3-margin-right.w3-text-teal
+                            | Hardware Skills
+                    ul
+                        li
+                            p
+                                | Verilog &nbsp;
+                                i.fas.fa-hdd
+                        // li
+                            // p
+                                // | Electronic Circuit Analysis &nbsp;
+                                // i.fas.fa-bolt
+
+                    // Courses Taken //////////////////////////////////////////
+                    p.w3-large.w3-text-theme
+                        b
+                            i.fa.fa-globe.fa-fw.w3-margin-right.w3-text-teal
+                            | Courses Taken
+                    ul.courseList
+                        li Algorithms/Foundations of Computing
+                        // li Quantum Mechanics 1 and 2
+                        li Data Structures & Algorithms
+                        li Machine Learning and Data Mining
+                        // li Natural Language Processing
+                        li Electronic Circuits/Digital Electronics
+                    br
+                    // website ////////////////////////////////////////////////
+                    .w3-large.w3-text-theme.website
+                        b
+                            i.fab.fa-chrome.fa-fw.w3-margin-right.w3-text-teal
+                            | Website
+                        p
+                            a(href='https://website2-e5cf5.firebaseapp.com') https://sammyalhashemi.com
+        // right two third container panel ////////////////////////////////////
+        .w3-twothird.fullExtend(style={'font-size': '1em', 'height': 'auto'})
+            .w3-container.w3-card.w3-white.w3-margin-bottom
+                h3.w3-text-grey.w3-padding-8
+                    i.fa.fa-suitcase.fa-fw.w3-margin-right.w3-xlarge.w3-text-teal
+                    | Work Experience
+                .w3-container
+                    h6.w3-opacity
+                        b Device Characterization and Product Engineering Intern &nbsp;
+                        i  Microsemi Corp.
+                    h6.w3-text-teal
+                        i.fa.fa-calendar.fa-fw.w3-margin-right
+                        | July 2017 - August 2018
+                    p
+                        include:markdown-it Markdown/Microsemi.md
+                    hr
+                .w3-container
+                    h6.w3-opacity
+                        b Undergraduate Student Researcher &nbsp;
+                        i University of Toronto
+                    h6.w3-text-teal
+                        i.fa.fa-calendar.fa-fw.w3-margin-right
+                        | May 2015 - September 2016
+                    p
+                        include:markdown-it Markdown/research.md
+        .w3-container.w3-paddin-8(style={'font-size': '1em', 'margin': '10px'})
+            h3.w3-text-grey.w3-padding-8
+                i.fas.fa-project-diagram.fa-fw.w3-margin-right.w3-xlarge.w3-text-teal
+                | School Projects
+            .w3-container
+                h6.w3-opacity
+                    b Thesis
+                h6.w3-text-teal
+                    //-i.fa.fa-calendar.fa-fw.w3-margin-right
+                    //-| July 2017 - &nbsp;
+                    //-span.w3-tag.w3-teal.w3-round Present
+                p
+                    include:markdown-it(html=true) Markdown/Thesis.md
+            .w3-container
+                h6.w3-opacity
+                    b Data Charter
+                p
+                    include:markdown-it(html=true) Markdown/charter.md
+            h3.w3-text-grey.w3-padding-8
+                i.fas.fa-project-diagram.fa-fw.w3-margin-right.w3-xlarge.w3-text-teal
+                | Personal Projects
+            .w3-container
+                h6.w3-opacity
+                    b Speed Challenge
+                p
+                    include:markdown-it(html=true) Markdown/speedChallenge.md
+            .w3-container
+                h6.w3-opacity
+                    b DashCam Speed Visualizer
+                p
+                    include:markdown-it(html=true) Markdown/dashcam_project.md
+        br
+        br
+        footer#footer.w3-container.w3-teal.w3-center.w3-margin-top
+
+
