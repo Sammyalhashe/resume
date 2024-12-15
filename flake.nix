@@ -13,6 +13,13 @@
           inherit (pkgs.texlive) scheme-minimal latex-bin latexmk geometry xcolor nopageno enumitem psnfss hyperref pdftexcmds infwarerr kvoptions etoolbox;
       };
     in rec {
+      devShells = {
+        default = pkgs.mkShell {
+           packages = [
+            tex        
+           ]; 
+        };
+      };
       packages = {
         document = pkgs.stdenvNoCC.mkDerivation rec {
           name = "resume";
@@ -23,7 +30,7 @@
             export PATH="${pkgs.lib.makeBinPath buildInputs}";
             mkdir -p .cache/texmf-var
             env TEXMFHOME=.cache TEXMFVAR=.cache/texmf-var \
-              latexmk -interaction=nonstopmode -pdf -lualatex \
+              latexmk -pvc -interaction=nonstopmode -pdf -lualatex \
               resume.tex
           '';
           installPhase = ''
