@@ -2,7 +2,7 @@
 *.aux
 *.out
 notes
-result/
+result
 .direnv/
 resume.pdf
 resume.fdb_latexmk
