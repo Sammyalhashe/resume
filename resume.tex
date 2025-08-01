@@ -25,7 +25,7 @@
         {\huge Sammy Al Hashemi}\\
         {\normalsize 917.846.6665 $|$ sammyalhashemi1@outlook.com}\\
         {\normalsize LinkedIn: \href{https://www.linkedin.com/in/sammyalhashemi}{linkedin.com/in/sammyalhashemi} $|$ GitHub: \href{https://github.com/Sammyalhashe}{github.com/Sammyalhashe}}\\
-        {\normalsize My "fun" profile: \href{https://sammys-portfolio.netlify.app}{https://sammys-portfolio.netlify.app}}\\
+        {\normalsize \href{https://salh.xyz}{https://salh.xyz}}\\
     \end{center}
     \sectionTxt{TECHNICAL SKILLS}
     \sectionRule
@@ -43,12 +43,12 @@
     \begin{small}
         \begin{itemize}
             \itemsep0em 
-            \item {\color{textGray} Worked on the design and implementation of an existing internal pub/sub middleware system that streamlines data from backend to frontend on Bloomberg's terminal}
+            \item {\color{textGray} Worked on the design and implementation of an internal pub/sub middleware system that streamlines data from backend to frontend on Bloomberg's terminal}
                 \begin{itemize}[label=$\circ$,topsep=-5px,partopsep=0px]
                     \itemsep0em 
-                    \item {\color{textGray} This product is the driving force behind delivering dynamic data to Bloomberg's clients.}
+                    \item {\color{textGray} This product is the driving force behind delivering dynamic data to Bloomberg's clients (IB, MSG, GP)}
                 \end{itemize}
-            \item {\color{textGray} Updated the protocol in the datalayer pipeline to support new messages.}
+            \item {\color{textGray} Implemented updates to the datalayer (view) protocol of the terminal to handle updates to the pub/sub framew, GPork's protocol.}
             \item {\color{textGray} Added the ability for application developers to dynamically change metadata that subscribers send to publishers.}
                 \begin{itemize}[label=$\circ$,topsep=-5px,partopsep=0px]
                     \itemsep0em 
@@ -60,11 +60,13 @@
                     \item {\color{textGray} Reorganized the internal mechanisms of how the pub/sub framework currently handles routing to account for this new routing logic.}
                     \item {\color{textGray} Added shared libraries that multiple tasks link in to provide entitlement information when needed to enhance infrastructure security.}
                 \end{itemize}
-            \item {\color{textGray} Introduced a methodology that would allow application developers using the pub/sub framework to quickly "unblock" their application when their application crashes.}
+            \item {\color{textGray} Owned the Cython implementation of the pub/sub framework}
                 \begin{itemize}[label=$\circ$,topsep=-5px,partopsep=0px]
                     \itemsep0em 
-                    \item {\color{textGray} This saves application developers' time by allowing them to bypass typical administrative approvals.}
+                    \item {\color{textGray} Made is so that the Cython application could build against a local refroot instead of pulling the latest unstable from dpkg.}
+                    \item {\color{textGray} Exposed changes in the internal protocol of the c++ sdk to the Cython implementation.}
                 \end{itemize}
+            \item {\color{textGray} Modernized the settings propogation by splitting the main process into a seperate task that delivers eventual consistency.}
         \end{itemize}
     \end{small}
 
@@ -117,6 +119,17 @@
             \itemsep0em 
             \item {\color{textGray} Using PyQt5, in a team of three I built a charting application that reads data interfaced from an \textit{ni daqmx} board as well as general serial ports.}
             \item {\color{textGray} Pyqtgraph was used to implement the charting visual, and the users are able to record data, stop, resume, and save the data to csv (as well as an image), and transform the data with Fast Fourier Transform and other logarithmic transforms.}
+        \end{itemize}
+    \end{small}
+
+    \textDate{ATP Website Scaper}{Mar 2020 -- June 2020}{\href{https://github.com/Sammyalhashe/ATPScraper}{Code URL}}
+    \begin{small}
+        \begin{itemize}
+            \itemsep0em 
+            \item {\color{textGray} I'm a massive tennis fan, and at the time I noticed there was no real source of tennis data for developers.}
+            \item {\color{textGray} The only true source of data was the official ATP website, but they themselves didn't provide direct access to it.}
+            \item {\color{textGray} I created a webscraper in Python using BeautifulSoup4 and served it with Flask to create an API deployed on Heroku.}
+            \item {\color{textGray} As a test, also created a sample golang cli application \href{https://github.com/Sammyalhashe/atp-commandline}{here}.}
         \end{itemize}
     \end{small}
 
