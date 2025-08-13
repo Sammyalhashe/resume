@@ -17,6 +17,7 @@
 \newcommand{\sectionRule}{\textcolor{gray}{\rule{7.27in}{0.02cm}}}
 \newcommand{\sectionTxt}[1]{\noindent\textbf{#1}\\}
 \newcommand{\textDate}[3]{\noindent#1 $|$ #2 $|$ {\color{textGray} #3}}
+\newcommand{\textDateWithLoc}[4]{\noindent#1 $|$ #2 $|$ {\color{textGray} #3} $|$ {\color{textGray} #4}}
 \newcommand{\projText}[2]{\noindent#1 $|$ {\color{textGray} #2}}
 
 
@@ -24,7 +25,7 @@
     \begin{center}
         {\huge Sammy Al Hashemi}\\
         {\normalsize 917.846.6665 $|$ sammyalhashemi1@outlook.com}\\
-        {\normalsize LinkedIn: \href{https://www.linkedin.com/in/sammyalhashemi}{linkedin.com/in/sammyalhashemi} $|$ GitHub: \href{https://github.com/Sammyalhashe}{github.com/Sammyalhashe}}\\
+        {\normalsize LinkedIn: \href{https://www.linkedin.com/in/sammyalhashemi}{linkedin.com/in/sammyalhashemi} $|$ GitHub: \href{https://github.com/Sammyalhashe}{https://github.com/Sammyalhashe}}\\
         {\normalsize \href{https://salh.xyz}{https://salh.xyz}}\\
     \end{center}
     \sectionTxt{TECHNICAL SKILLS}
@@ -33,55 +34,60 @@
         \begin{itemize}
             \itemsep0em 
             \item Proficient: {\color{textGray}C++, Python, Linux}
-            \item Exposure: {\color{textGray}C, Bash Scripting, Makefile/Cmake, Functional Ocaml, Typescript/Javascript, Zig}
+            \item Exposure: {\color{textGray}C, Bash Scripting, Makefile/CMake, Functional OCaml, Typescript/Javascript, Zig}
         \end{itemize}
     \end{small}
     \sectionTxt{WORK EXPERIENCE}
     \sectionRule
 
-    \textDate{Bloomberg}{Software Engineer}{Present}
+    \textDateWithLoc{Bloomberg}{Software Engineer}{Present}{New York City}
     \begin{small}
         \begin{itemize}
             \itemsep0em 
-            \item {\color{textGray} Worked on the design and implementation of an internal pub/sub middleware system that streamlines data from backend to frontend on Bloomberg's terminal}
+            % \item {\color{textGray} Worked on the design and implementation of an internal pub/sub middleware system that streamlines data from backend to frontend on Bloomberg's terminal}
+            \item {\color{textGray} Designed and implemented an internal pub/sub middleware delivering real-time data from backend services to multiple client-facing applications, enabling dynamic, low-latency updates across the terminal UI.}
                 \begin{itemize}[label=$\circ$,topsep=-5px,partopsep=0px]
                     \itemsep0em 
                     \item {\color{textGray} This product is the driving force behind delivering dynamic data to Bloomberg's clients (IB, MSG, GP)}
                 \end{itemize}
-            \item {\color{textGray} Implemented updates to the datalayer (view) protocol of the terminal to handle updates to the pub/sub framew, GPork's protocol.}
+            \item {\color{textGray} Implemented updates to the datalayer (view) protocol of the terminal to handle updates to the pub/sub framework's protocol.}
             \item {\color{textGray} Added the ability for application developers to dynamically change metadata that subscribers send to publishers.}
                 \begin{itemize}[label=$\circ$,topsep=-5px,partopsep=0px]
                     \itemsep0em 
                     \item {\color{textGray} Historically, data transmission was one way. This change allowed for two way data transfer and allowed for changing subscriptions dynamically.}
                 \end{itemize}
-            \item {\color{textGray} Worked with sister teams to integrate their routing and entitlement products into the pub/sub framework.}
-                \begin{itemize}[label=$\circ$,topsep=-5px,partopsep=0px]
-                    \itemsep0em 
-                    \item {\color{textGray} Reorganized the internal mechanisms of how the pub/sub framework currently handles routing to account for this new routing logic.}
-                    \item {\color{textGray} Added shared libraries that multiple tasks link in to provide entitlement information when needed to enhance infrastructure security.}
-                \end{itemize}
-            \item {\color{textGray} Owned the Cython implementation of the pub/sub framework}
-                \begin{itemize}[label=$\circ$,topsep=-5px,partopsep=0px]
-                    \itemsep0em 
-                    \item {\color{textGray} Made is so that the Cython application could build against a local refroot instead of pulling the latest unstable from dpkg.}
-                    \item {\color{textGray} Exposed changes in the internal protocol of the c++ sdk to the Cython implementation.}
-                \end{itemize}
-            \item {\color{textGray} Modernized the settings propogation by splitting the main process into a seperate task that delivers eventual consistency.}
+            \item {\color{textGray} Integrated routing and entitlement services into the framework, refactoring internal routing logic and adding shared libraries for RBAC/entitlement checks; improved security posture and standardized access control across 100s of applications.}
+            % \item {\color{textGray} Worked with sister teams to integrate their routing and entitlement products into the pub/sub framework.}
+            %     \begin{itemize}[label=$\circ$,topsep=-5px,partopsep=0px]
+            %         \itemsep0em 
+            %         \item {\color{textGray} Reorganized the internal mechanisms of how the pub/sub framework currently handles routing to account for this new routing logic.}
+            %         \item {\color{textGray} Added shared libraries that multiple tasks link in to provide entitlement information when needed to enhance infrastructure security.}
+            %     \end{itemize}
+            \item {\color{textGray} Owned the Cython binding for the C++ SDK of the pub/sub framework, exposing new protocol features and enabling local refroot builds instead of dpkg-only.}
+            % \item {\color{textGray} Owned the Cython implementation of the pub/sub framework}
+                % \begin{itemize}[label=$\circ$,topsep=-5px,partopsep=0px]
+                %     \itemsep0em 
+                %     \item {\color{textGray} Made it so that the Cython application could build against a local refroot instead of pulling the latest unstable from dpkg.}
+                %     \item {\color{textGray} Exposed changes in the internal protocol of the c++ sdk to the Cython implementation.}
+                % \end{itemize}
+            % \item {\color{textGray} Modernized the settings propagation by splitting the main process into a separate task that delivers eventual consistency.}
+            \item {\color{textGray} Modernized settings propagation by extracting it into a dedicated process for eventual consistency; improved fault isolation and completely eliminated config/settings related incidents.}
         \end{itemize}
     \end{small}
 
 
-    \textDate{MThree (Contracted to Morgan Stanley)}{Software Developer}{Aug 2019 -- Aug 2020}
+    \textDateWithLoc{MThree (Contracted to Morgan Stanley)}{Software Developer}{Aug 2019 -- Aug 2020}{Montreal}
     \begin{small}
         \begin{itemize}
             \itemsep0em 
             \item {\color{textGray} Developed a javascript and Angular 6 frontend to provide users with streamlined experience when working through internal entitlement management workflow.}
             \item {\color{textGray} Engineered a backend java server to handle 500+ ticket requests weekly as well as interfacing with internal APIs for the entire entitlement system utilizing Spring Boot.}
-            \item {\color{textGray} Maintained a frontend javascript testing framework built wiht Protractor and Selenium to test new feature scenarios, reducing bug rate by close to 5\%.}
+            % \item {\color{textGray} Maintained a frontend javascript testing framework built with Protractor and Selenium to test new feature scenarios, reducing bug rate by close to 5\%.}
+            \item {\color{textGray} Maintained E2E tests with Protractor and Selenium for new features, reducing regressions by ~5\% and accelerating releases.}
         \end{itemize}
     \end{small}
 
-    \textDate{Microsemi}{Device Characterization Engineer (Intern)}{Jun 2017 -- Aug 2018}
+    \textDateWithLoc{Microsemi}{Device Characterization Engineer (Intern)}{Jun 2017 -- Aug 2018}{San Jose}
     \begin{small}
         \begin{itemize}
             \itemsep0em 
@@ -92,7 +98,7 @@
     \sectionTxt{EDUCATION}
     \sectionRule
 
-    \textDate{B.S. Engineering Science (Physics)}{University of Toronto}{Sept 2014 -- June 2019}
+    \textDateWithLoc{B.S. Engineering Science (Physics)}{University of Toronto}{Sept 2014 -- June 2019}{Toronto}
     \begin{small}
         \begin{itemize}
             \itemsep0em 
@@ -117,19 +123,19 @@
     \begin{small}
         \begin{itemize}
             \itemsep0em 
-            \item {\color{textGray} Using PyQt5, in a team of three I built a charting application that reads data interfaced from an \textit{ni daqmx} board as well as general serial ports.}
-            \item {\color{textGray} Pyqtgraph was used to implement the charting visual, and the users are able to record data, stop, resume, and save the data to csv (as well as an image), and transform the data with Fast Fourier Transform and other logarithmic transforms.}
+            \item {\color{textGray} Using PyQt5, in a team of three I built a charting application that reads data interfaced from an \textit{NI-DAQmx} board as well as general serial ports.}
+            \item {\color{textGray} PyQtgraph was used to implement the charting visual, and the users are able to record data, stop, resume, and save the data to csv (as well as an image), and transform the data with Fast Fourier Transform and other logarithmic transforms.}
         \end{itemize}
     \end{small}
 
-    \textDate{ATP Website Scaper}{Mar 2020 -- June 2020}{\href{https://github.com/Sammyalhashe/ATPScraper}{Code URL}}
+    \textDate{ATP Website Scraper}{Mar 2020 -- June 2020}{\href{https://github.com/Sammyalhashe/ATPScraper}{Code URL}}
     \begin{small}
         \begin{itemize}
             \itemsep0em 
             \item {\color{textGray} I'm a massive tennis fan, and at the time I noticed there was no real source of tennis data for developers.}
             \item {\color{textGray} The only true source of data was the official ATP website, but they themselves didn't provide direct access to it.}
             \item {\color{textGray} I created a webscraper in Python using BeautifulSoup4 and served it with Flask to create an API deployed on Heroku.}
-            \item {\color{textGray} As a test, also created a sample golang cli application \href{https://github.com/Sammyalhashe/atp-commandline}{here}.}
+            \item {\color{textGray} As a test, also created a sample Go cli application \href{https://github.com/Sammyalhashe/atp-commandline}{here}.}
         \end{itemize}
     \end{small}
 
