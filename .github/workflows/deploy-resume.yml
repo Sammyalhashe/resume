@@ -23,7 +23,7 @@ jobs:
       - uses: cachix/install-nix-action@v27
 
       - name: Build resume
-        run: nix build -o public/resume.pdf && cp public/resume.pdf public/index.pdf
+        run: nix build && mkdir -p public && cp result/resume.pdf public/resume.pdf
 
       - name: Create index page
         run: |
