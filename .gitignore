@@ -7,3 +7,7 @@ result
 resume.pdf
 resume.fdb_latexmk
 resume.fls
+node_modules/
+crypto_trader/
+package.json
+package-lock.json

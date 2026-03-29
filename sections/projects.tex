@@ -1,0 +1,39 @@
+\section{Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{Crypto Trader} $|$ \emph{C++20/23, Boost.Asio, Boost.Beast, GoogleTest, CMake, Nix}}{}
+          \resumeItemListStart
+            \resumeItem{High-performance cryptocurrency trading bot with dual WebSocket clients (sync and async via Boost.Asio) for Coinbase Advanced Trade with automatic reconnection.}
+            \resumeItem{Paper trading engine with configurable balance, commission rates, realized/unrealized PnL tracking, and FIFO/LIFO position management.}
+            \resumeItem{C++20 concepts for compile-time type constraints, \texttt{std::jthread} for cooperative cancellation, lock-free SPSC queue for event logging.}
+            \resumeItem{Full test suite with GoogleTest/GMock, Doxygen documentation, GitHub Actions CI, mold/lld fast linking.}
+            \resumeItem{\href{https://github.com/Sammyalhashe/crypto_trader}{\underline{github.com/Sammyalhashe/crypto\_trader}}}
+          \resumeItemListEnd
+
+      \nopagebreak[4]
+      \resumeProjectHeading
+          {\textbf{Trading Bot} $|$ \emph{Python, web3.py, Uniswap V3, Coinbase API, Nix, SOPS}}{}
+          \resumeItemListStart
+            \resumeItem{Production cryptocurrency trading system executing trend-following and mean-reversion strategies across Coinbase (CEX) and Uniswap V3 on Base L2 (DEX).}
+            \resumeItem{Dual-signal regime detection combining BTC macro trend with ETH/BTC rotation into a five-state market classifier (STRONG\_BULL through STRONG\_BEAR).}
+            \resumeItem{Dual-executor system: Coinbase REST API with JWT (ES256) authentication and on-chain Uniswap V3 swaps with RPC failover across multiple endpoints.}
+            \resumeItem{Packaged as a Nix flake with SOPS/age secrets management, Telegram notifications, and pytest test suite.}
+            \resumeItem{\href{https://github.com/Sammyalhashe/trading-bot-flake}{\underline{github.com/Sammyalhashe/trading-bot-flake}}}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{UDP Order-Book} $|$ \emph{C++}}{}
+          \resumeItemListStart
+            \resumeItem{Lock-free matching engine over UDP; benchmark shows $\sim$50\,$\mu$s order latency (proof-of-concept).}
+            \resumeItem{\href{https://github.com/Sammyalhashe/udp_order_book}{\underline{github.com/Sammyalhashe/udp\_order\_book}}}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Gameboy Emulator} $|$ \emph{C++}}{}
+          \resumeItemListStart
+            \resumeItem{Nintendo Gameboy emulator with completed CPU opcode set; next steps: interrupt handling and timing.}
+            \resumeItem{\href{https://github.com/Sammyalhashe/GameboyEmulator}{\underline{github.com/Sammyalhashe/GameboyEmulator}}}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
