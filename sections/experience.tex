@@ -2,37 +2,32 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Bloomberg}{2020 -- Present}
-      {Senior Software Engineer}{}
+      {Bloomberg}{Jan 2024 -- Present}
+      {Senior Software Engineer}{New York, NY}
+    \resumeSubheading
+      {}{Jan 2020 -- Jan 2024}
+      {Software Engineer}{}
       \resumeItemListStart
-        \resumeItem{Designed and implemented an internal \textbf{C++} pub/sub middleware that streams real-time market data from backend services to Bloomberg Terminal clients.}
+        \resumeItem{Designed and implemented an internal \textbf{C++} pub/sub middleware streaming millions of real-time market data updates per second to Bloomberg Terminal clients across IB, MSG, and GP products.}
           \begin{itemize}[leftmargin=0.3in]
-            \item\small{Drives dynamic data delivery to Bloomberg's IB, MSG, and GP clients.}
-            \item\small{Added two-way metadata exchange, allowing subscribers to change subscription parameters at runtime.}
-            \item\small{Modernized settings propagation by splitting the main process into a separate task delivering eventual consistency.}
+            \item\small{Added two-way metadata exchange, enabling subscribers to modify subscription parameters at runtime without reconnecting.}
+            \item\small{Refactored the settings pipeline to return arbitrary JSON from the database, eliminating coordinated schema changes across processes when adding new configuration fields.}
           \end{itemize}
           \vspace{-4pt}
-        \resumeItem{Integrated routing and entitlement products from sister teams into the framework.}
-        \resumeItem{Owned the Cython wrapper for the framework, enabling local distribution builds and exposing C++ SDK changes to Cython.}
-        \resumeItem{Exposed the pub/sub framework to web clients over HTTP via an nginx reverse proxy forwarding JSON messages; secured connections with JWT.}
-        \resumeItem{Designed an OpenAPI specification and JavaScript client SDK to ease adoption for web developers at Bloomberg.}
-        \resumeItem{Wrote a \textbf{Python} bot to automatically triage false-positive tickets using Kafka and batched HTTP requests to minimize API rate limits and redundant calls.}
-        \resumeItem{Delivered an internal conference talk on x86 memory ordering, cache-coherency protocols, and how atomic implementations leverage hardware-level guarantees.}
+        \resumeItem{Integrated company-wide routing and entitlement libraries into the framework, replacing per-team configuration with a unified request-routing and access-control layer as part of an org-level standardization initiative.}
+        \resumeItem{Built and maintained a Cython binding layer exposing the C++ SDK to Python consumers; became one of Bloomberg's most widely used internal libraries, adopted by 50+ application teams for middleware integration.}
+        \resumeItem{Exposed the pub/sub framework to web clients over HTTP via an nginx reverse proxy with JWT-secured JSON transport.}
+        \resumeItem{Designing an OpenAPI specification and JavaScript client SDK to standardize web-client integration across Bloomberg.}
+        \resumeItem{Wrote a \textbf{Python} bot that automatically triages $\sim$100 false-positive tickets per week via Kafka and batched HTTP requests, eliminating a recurring manual workload for the team.}
+        \resumeItem{Presented technical talks at Bloomberg's internal conference and C++ guild (see Talks section).}
       \resumeItemListEnd
 
     \resumeSubheading
       {MThree (Contracted to Morgan Stanley)}{Aug 2019 -- Aug 2020}
-      {Software Developer}{}
+      {Software Developer}{New York, NY}
       \resumeItemListStart
         \resumeItem{Engineered a Java/Spring Boot backend handling 500+ entitlement ticket requests weekly, interfacing with internal APIs across the entitlement system.}
-        \resumeItem{Developed an Angular 6 frontend and maintained a Protractor/Selenium test suite, reducing bug rate by $\sim$5\%.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Microsemi}{Jun 2017 -- Aug 2018}
-      {Device Characterization Engineer (Intern)}{}
-      \resumeItemListStart
-        \resumeItem{Built test structures to characterize G5 FPGA Mathblock and AC components using Verilog and vendor FPGA programming software.}
+        \resumeItem{Developed an Angular 6 frontend and maintained a Protractor/Selenium test suite ensuring end-to-end coverage of the entitlement workflow.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd

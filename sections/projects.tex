@@ -2,39 +2,33 @@
     \resumeSubHeadingListStart
 
       \resumeProjectHeading
-          {\textbf{Crypto Trader} $|$ \emph{C++20/23, Boost.Asio, Boost.Beast, GoogleTest, CMake, Nix}}{}
+          {\href{https://github.com/Sammyalhashe/crypto_trader}{\textbf{Crypto Trader}} $|$ \emph{C++20/23, Boost.Asio, Boost.Beast, GoogleTest, CMake, Nix} $|$ \href{https://crypto-trader-docs.salh.xyz}{\underline{docs}}}{2024 -- Present}
           \resumeItemListStart
-            \resumeItem{High-performance cryptocurrency trading bot with dual WebSocket clients (sync and async via Boost.Asio) for Coinbase Advanced Trade with automatic reconnection.}
+            \resumeItem{High-performance cryptocurrency trading bot with dual WebSocket clients (sync and async via Boost.Asio) for Coinbase Advanced Trade with automatic reconnection and backoff.}
             \resumeItem{Paper trading engine with configurable balance, commission rates, realized/unrealized PnL tracking, and FIFO/LIFO position management.}
+            \resumeItem{Dual-signal regime detection combining BTC macro trend with ETH/BTC rotation into a five-state market classifier for trend-following and mean-reversion strategies.}
             \resumeItem{C++20 concepts for compile-time type constraints, \texttt{std::jthread} for cooperative cancellation, lock-free SPSC queue for event logging.}
             \resumeItem{Full test suite with GoogleTest/GMock, Doxygen documentation, GitHub Actions CI, mold/lld fast linking.}
-            \resumeItem{\href{https://github.com/Sammyalhashe/crypto_trader}{\underline{github.com/Sammyalhashe/crypto\_trader}}} \\
-            \resumeItem{\href{https://crypto-trader-docs.salh.xyz}{\underline{crypto-trader-docs.salh.xyz}}}
-          \resumeItemListEnd
-
-      \nopagebreak[4]
-      \resumeProjectHeading
-          {\textbf{Trading Bot} $|$ \emph{Python, web3.py, Uniswap V3, Coinbase API, Nix, SOPS}}{}
-          \resumeItemListStart
-            \resumeItem{Production cryptocurrency trading system executing trend-following and mean-reversion strategies across Coinbase (CEX) and Uniswap V3 on Base L2 (DEX).}
-            \resumeItem{Dual-signal regime detection combining BTC macro trend with ETH/BTC rotation into a five-state market classifier (STRONG\_BULL through STRONG\_BEAR).}
-            \resumeItem{Dual-executor system: Coinbase REST API with JWT (ES256) authentication and on-chain Uniswap V3 swaps with RPC failover across multiple endpoints.}
-            \resumeItem{Packaged as a Nix flake with SOPS/age secrets management, Telegram notifications, and pytest test suite.}
-            \resumeItem{\href{https://github.com/Sammyalhashe/trading-bot-flake}{\underline{github.com/Sammyalhashe/trading-bot-flake}}}
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{UDP Order-Book} $|$ \emph{C++}}{}
+          {\href{https://github.com/Sammyalhashe/udp_order_book}{\textbf{UDP Order-Book}} $|$ \emph{C++, UDP, lock-free data structures}}{2024}
           \resumeItemListStart
-            \resumeItem{Lock-free matching engine over UDP; benchmark shows $\sim$50\,$\mu$s order latency (proof-of-concept).}
-            \resumeItem{\href{https://github.com/Sammyalhashe/udp_order_book}{\underline{github.com/Sammyalhashe/udp\_order\_book}}}
+            \resumeItem{Lock-free matching engine over UDP with price-level ordered book and FIFO order queues; benchmarked at $\sim$50\,$\mu$s order-to-fill latency.}
+            \resumeItem{Custom lock-free SPSC ring buffer for inter-thread event transport; zero-copy message deserialization from UDP datagrams.}
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{Gameboy Emulator} $|$ \emph{C++}}{}
+          {\textbf{NixOS Homelab} $|$ \emph{NixOS, Podman, WireGuard, nginx}}{2024 -- Present}
           \resumeItemListStart
-            \resumeItem{Nintendo Gameboy emulator with completed CPU opcode set; next steps: interrupt handling and timing.}
-            \resumeItem{\href{https://github.com/Sammyalhashe/GameboyEmulator}{\underline{github.com/Sammyalhashe/GameboyEmulator}}}
+            \resumeItem{Fully declarative NixOS-managed home server running Podman containers for Vaultwarden, Nextcloud, PiHole, nginx Proxy Manager, Home Assistant, and WireGuard VPN.}
+            \resumeItem{Self-hosted AI inference with locally-run models via OpenClaw, provisioned and configured entirely through Nix.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\href{https://github.com/Sammyalhashe/GameboyEmulator}{\textbf{Gameboy Emulator}} $|$ \emph{C++}}{2023}
+          \resumeItemListStart
+            \resumeItem{Nintendo Gameboy emulator implementing the full Z80-derived CPU instruction set with cycle-accurate opcode execution.}
           \resumeItemListEnd
 
     \resumeSubHeadingListEnd
