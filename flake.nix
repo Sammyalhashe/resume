@@ -29,9 +29,9 @@
       rec {
         devShells = {
           default = pkgs.mkShell {
-            packages = [
+            packages = with pkgs; [
               tex
-              texlivePackages.ec
+              texlivePackages.ecv
             ];
           };
         };
