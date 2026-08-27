@@ -5,7 +5,7 @@
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{lmodern}
 \usepackage[margin=0.5in]{geometry}
@@ -51,6 +51,13 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -71,10 +78,13 @@
 
 \input{sections/header.tex}
 \input{sections/experience.tex}
+\input{sections/opensource.tex}
 \input{sections/skills.tex}
 \input{sections/projects.tex}
 \input{sections/talks.tex}
 \input{sections/education.tex}
-\input{sections/interests.tex}
+% Awards folded into education.tex and Interests dropped to hold one page.
+% \input{sections/awards.tex}
+% \input{sections/interests.tex}
 
 \end{document}

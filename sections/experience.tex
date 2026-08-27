@@ -2,13 +2,16 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Bloomberg}{Jan 2024 -- Present}
-      {Senior Software Engineer}{New York, NY}
-    \resumeSubheading
-      {}{Jan 2020 -- Jan 2024}
-      {Software Engineer}{}
+      {Bloomberg}{New York, NY}
+      {Senior Software Engineer}{Jan 2024 -- Present}
+    \resumeSubSubheading
+      {Software Engineer}{Sept 2020 -- Jan 2024}
       \resumeItemListStart
-        \resumeItem{Designed and implemented an internal \textbf{C++} pub/sub middleware streaming millions of real-time market data updates per second to Bloomberg Terminal clients across IB, MSG, and GP products.}
+        % Scale is expressed as model count, not throughput: DMPA shows a busy broker
+        % hosting ~103 models with only ~22 publishing, most under 4 msgs/s. Message
+        % rate is the wrong axis for this system -- fan-out and per-model isolation are
+        % the real story. A fleet-wide model or subscriber count would be stronger here.
+        \resumeItem{Designed and implemented an internal \textbf{C++} pub/sub middleware streaming real-time market data to Bloomberg Terminal clients across IB, MSG, and GP; each broker hosts 100+ independently entitled and rate-limited publishing models.}
           \begin{itemize}[leftmargin=0.3in]
             \item\small{Added two-way metadata exchange, enabling subscribers to modify subscription parameters at runtime without reconnecting.}
             \item\small{Refactored the settings pipeline to return arbitrary JSON from the database, eliminating coordinated schema changes across processes when adding new configuration fields.}
@@ -16,18 +19,15 @@
           \vspace{-4pt}
         \resumeItem{Integrated company-wide routing and entitlement libraries into the framework, replacing per-team configuration with a unified request-routing and access-control layer as part of an org-level standardization initiative.}
         \resumeItem{Built and maintained a Cython binding layer exposing the C++ SDK to Python consumers; became one of Bloomberg's most widely used internal libraries, adopted by 50+ application teams for middleware integration.}
-        \resumeItem{Exposed the pub/sub framework to web clients over HTTP via an nginx reverse proxy with JWT-secured JSON transport.}
-        \resumeItem{Designing an OpenAPI specification and JavaScript client SDK to standardize web-client integration across Bloomberg.}
+        \resumeItem{Extended the framework to web clients over HTTP --- JWT-secured JSON transport behind an nginx reverse proxy --- plus an OpenAPI specification and JavaScript client SDK standardizing web-client integration across Bloomberg.}
         \resumeItem{Wrote a \textbf{Python} bot that automatically triages $\sim$100 false-positive tickets per week via Kafka and batched HTTP requests, eliminating a recurring manual workload for the team.}
-        \resumeItem{Presented technical talks at Bloomberg's internal conference and C++ guild (see Talks section).}
       \resumeItemListEnd
 
     \resumeSubheading
-      {MThree (Contracted to Morgan Stanley)}{Aug 2019 -- Aug 2020}
-      {Software Developer}{New York, NY}
+      {MThree (Contracted to Morgan Stanley)}{New York, NY}
+      {Software Developer}{Aug 2019 -- Aug 2020}
       \resumeItemListStart
         \resumeItem{Engineered a Java/Spring Boot backend handling 500+ entitlement ticket requests weekly, interfacing with internal APIs across the entitlement system.}
-        \resumeItem{Developed an Angular 6 frontend and maintained a Protractor/Selenium test suite ensuring end-to-end coverage of the entitlement workflow.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd

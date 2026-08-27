@@ -4,11 +4,9 @@
       \resumeProjectHeading
           {\href{https://github.com/Sammyalhashe/crypto_trader}{\textbf{Crypto Trader}} $|$ \emph{C++20/23, Boost.Asio, Boost.Beast, GoogleTest, CMake, Nix} $|$ \href{https://crypto-trader-docs.salh.xyz}{\underline{docs}}}{2024 -- Present}
           \resumeItemListStart
-            \resumeItem{High-performance cryptocurrency trading bot with dual WebSocket clients (sync and async via Boost.Asio) for Coinbase Advanced Trade with automatic reconnection and backoff.}
+            \resumeItem{Sync and async WebSocket market-data clients (Boost.Asio) for Coinbase Advanced Trade, with automatic reconnection and backoff.}
             \resumeItem{Paper trading engine with configurable balance, commission rates, realized/unrealized PnL tracking, and FIFO/LIFO position management.}
-            \resumeItem{Dual-signal regime detection combining BTC macro trend with ETH/BTC rotation into a five-state market classifier for trend-following and mean-reversion strategies.}
             \resumeItem{C++20 concepts for compile-time type constraints, \texttt{std::jthread} for cooperative cancellation, lock-free SPSC queue for event logging.}
-            \resumeItem{Full test suite with GoogleTest/GMock, Doxygen documentation, GitHub Actions CI, mold/lld fast linking.}
           \resumeItemListEnd
 
       \resumeProjectHeading
@@ -16,19 +14,6 @@
           \resumeItemListStart
             \resumeItem{Lock-free matching engine over UDP with price-level ordered book and FIFO order queues; benchmarked at $\sim$50\,$\mu$s order-to-fill latency.}
             \resumeItem{Custom lock-free SPSC ring buffer for inter-thread event transport; zero-copy message deserialization from UDP datagrams.}
-          \resumeItemListEnd
-
-      \resumeProjectHeading
-          {\textbf{NixOS Homelab} $|$ \emph{NixOS, Podman, WireGuard, nginx}}{2024 -- Present}
-          \resumeItemListStart
-            \resumeItem{Fully declarative NixOS-managed home server running Podman containers for Vaultwarden, Nextcloud, PiHole, nginx Proxy Manager, Home Assistant, and WireGuard VPN.}
-            \resumeItem{Self-hosted AI inference with locally-run models via OpenClaw, provisioned and configured entirely through Nix.}
-          \resumeItemListEnd
-
-      \resumeProjectHeading
-          {\href{https://github.com/Sammyalhashe/GameboyEmulator}{\textbf{Gameboy Emulator}} $|$ \emph{C++}}{2023}
-          \resumeItemListStart
-            \resumeItem{Nintendo Gameboy emulator implementing the full Z80-derived CPU instruction set with cycle-accurate opcode execution.}
           \resumeItemListEnd
 
     \resumeSubHeadingListEnd

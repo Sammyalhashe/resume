@@ -1,0 +1,11 @@
+\section{Open Source}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+        {\href{https://github.com/gcc-mirror/gcc/commit/39ba948f9b86e136395b6edfe167ac7ba7232928}{\textbf{GCC}} $|$ \emph{C/C++ front end} $|$ commit \texttt{39ba948}, merged upstream}{2026}
+        \resumeItemListStart
+          \resumeItem{Authored \textit{``c-family: honor explicit \texttt{-Wstrict-aliasing} under \texttt{-fno-strict-aliasing}''}, making the front-end aliasing diagnostic fire when explicitly requested even with the optimization disabled --- by scoping a temporary \texttt{flag\_strict\_aliasing} override around alias-set queries.}
+          \resumeItem{Hoisted \texttt{temp\_override} from \texttt{cp-tree.h} into \texttt{c-common.h} for shared C/C++ use; added \texttt{c-c++-common} regression tests.}
+        \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
